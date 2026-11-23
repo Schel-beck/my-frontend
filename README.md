@@ -6,16 +6,16 @@ A responsive React/Vite prototype for the third-semester Coding Learning Platfor
 
 Requires a compatible Node.js version for the existing Vite setup.
 
-\`\`\`bash
+```bash
 npm install
 npm run dev
-\`\`\`
+```
 
 Open the local URL shown by Vite (usually http://localhost:5173).
 
 ## Features and component hierarchy
 
-\`\`\`text
+```text
 App (mock data, shared state)
 ├── Navbar
 ├── Subjects overview
@@ -27,7 +27,7 @@ App (mock data, shared state)
 │   ├── ChatMessage
 │   └── ChatInput
 └── AuthPage
-\`\`\`
+```
 
 - Subjects appear in one accordion list (no overarching category buttons).
 - Expanding a subject shows its questions. Clicking a question opens a chat for **that question**.
