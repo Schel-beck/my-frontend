@@ -1,0 +1,10 @@
+.message-row{display:flex;align-items:flex-start;gap:13px;max-width:86%}
+.message-row-user{align-self:flex-end;flex-direction:row-reverse}
+.message-avatar{width:40px;height:40px;flex:0 0 40px;background:#e5efff;border-radius:12px;display:grid;place-items:center;color:#2464d1;font-size:25px;font-weight:bold}
+.message-avatar-user{background:#ecf3ff;border-radius:50%;font-size:22px;color:#5c86cc}
+.message-content{display:grid;gap:6px;min-width:0}
+.message-row-user .message-content{justify-items:end}
+.message-author{font-size:12px;font-weight:750;color:#263b60}
+.message-bubble{background:#f0f3f8;color:#23324b;border-radius:5px 14px 14px 14px;padding:14px 17px;font-size:14px;line-height:1.65;white-space:pre-wrap;overflow-wrap:anywhere}
+.message-bubble-user{background:#e1edff;border-radius:14px 5px 14px 14px}
+@media(max-width:560px){.message-row{max-width:100%;gap:9px}.message-avatar{width:30px;height:30px;flex-basis:30px;font-size:19px}.message-bubble{font-size:13px;padding:12px}}

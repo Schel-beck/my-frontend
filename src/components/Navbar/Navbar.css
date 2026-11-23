@@ -1,0 +1,10 @@
+.site-header{height:78px;background:#fff;border-bottom:1px solid #e8eef8;position:sticky;top:0;z-index:20;box-shadow:0 8px 22px rgba(28,49,89,.025)}
+.header-inner{max-width:1140px;margin:0 auto;padding:0 30px;height:100%;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:11px;padding:0;border:0;background:none;font-size:23px;font-weight:800;letter-spacing:-1px;color:#172544;cursor:pointer}
+.brand-icon{font-size:22px;color:#2665d8;font-weight:900;letter-spacing:-3px;background:#eef5ff;padding:10px 13px 10px 9px;border-radius:13px}
+.brand-accent{color:#286be7}
+.top-nav{display:flex;gap:10px;align-items:center}
+.nav-link{background:transparent;border:0;color:#56657f;padding:10px 18px;border-radius:11px;font-size:14px;font-weight:600;cursor:pointer}
+.nav-link:hover{background:#eef4ff;color:#1b4bab}
+.nav-link-active{background:#e7f0ff;color:#1a55ba}
+@media(max-width:560px){.site-header{height:auto}.header-inner{padding:12px 16px;flex-wrap:wrap;justify-content:center}.brand{font-size:21px}.top-nav{width:100%;justify-content:center}.nav-link{padding:9px 14px}}

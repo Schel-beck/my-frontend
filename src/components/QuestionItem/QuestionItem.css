@@ -1,0 +1,9 @@
+.question-list{list-style:none;display:grid;gap:6px;margin:0;padding:0}
+.question-item{margin:0;padding:0}
+.question-button{display:flex;width:100%;align-items:center;gap:16px;text-align:left;border:0;border-radius:11px;background:transparent;padding:13px 15px;cursor:pointer;color:#263755;transition:background .15s,transform .15s}
+.question-button:hover{background:#eaf2ff;transform:translateX(2px)}
+.question-number{font-size:12px;font-weight:750;color:#8396b0;font-variant-numeric:tabular-nums}
+.question-title{font-size:14px;line-height:1.45;flex:1;font-weight:500}
+.answered-icon{display:flex;align-items:center;justify-content:center;width:26px;height:26px;flex:0 0 26px;border-radius:50%;background:#1e9e58;color:white;font-weight:800;font-size:15px}
+.unanswered-arrow{color:#6282b4;font-size:20px}
+@media(max-width:560px){.question-button{padding:10px 6px;gap:10px}.question-title{font-size:12px}}

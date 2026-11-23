@@ -1,0 +1,7 @@
+.chat-input-area{border-top:1px solid #e3eaf5;padding:17px 20px;background:white;display:flex;align-items:center;gap:11px}
+.chat-input-area input{min-width:0;flex:1;border:1px solid #ccd9ed;border-radius:11px;background:#fff;min-height:52px;padding:0 17px;color:#24334f;outline:none;font-size:14px;font-family:inherit}
+.chat-input-area input:focus{border-color:#4b86ed;box-shadow:0 0 0 3px #d9e8ff}
+.chat-input-area input::placeholder{color:#95a1b4}
+.send-button{border:0;background:#286de7;color:#fff;border-radius:11px;min-width:51px;min-height:51px;cursor:pointer;font-size:21px;box-shadow:0 6px 14px rgba(40,109,231,.2)}
+.send-button:hover:not(:disabled){background:#185bcf}
+.send-button:disabled{background:#9bb9ed;cursor:not-allowed;box-shadow:none}
