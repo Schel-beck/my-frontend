@@ -3,6 +3,8 @@ import Navbar from './components/Navbar/Navbar.jsx';
 import SubjectList from './components/SubjectList/SubjectList.jsx';
 import ChatPage from './components/ChatPage/ChatPage.jsx';
 import AuthPage from './components/AuthPage/AuthPage.jsx';
+import LoggedIn from './components/AuthPage/LoggedIn.jsx';
+import facade from './apiFacade.js';
 import './App.css';
 
 // Step 3: dummy data in App, passed down with props. API-compatible names and IDs.
@@ -28,6 +30,15 @@ function readProgress(){
   } catch { return []; }
 }
 export default function App(){
+  const [loggedIn,setLoggedIn]=useState(facade.loggedIn);
+  function login(username,password){
+    return facade.login(username,password).then(()=>setLoggedIn(true));
+  }
+  function logout(){
+    facade.logout();
+    setLoggedIn(false);
+    setPage('login');
+  }
   const [page,setPage]=useState('subjects');
   const [openSubjectId,setOpenSubjectId]=useState(1);
   const [question,setQuestion]=useState(null);
@@ -56,7 +67,7 @@ export default function App(){
   }
   function resetProgress(){setAnsweredIds([]);setConversations({});}
   return <div className="app-shell">
-    <Navbar activePage={page} onNavigate={setPage}/>
+    <Navbar activePage={page} onNavigate={setPage} loggedIn={loggedIn}/>
     <main className="main-content">
       {page==='subjects' && <section aria-labelledby="subjects-heading">
         <div className="intro-panel">
@@ -73,7 +84,7 @@ export default function App(){
       </section>}
       {page==='chat' && <ChatPage question={question} messages={question?(conversations[question.id]||[]):[]}
         isAnswered={question?answeredIds.includes(question.id):false} onSend={sendAnswer} onBack={()=>setPage('subjects')}/>}
-      {page==='login' && <AuthPage/>}
+      {page==='login' && (loggedIn ? <LoggedIn logout={logout}/> : <AuthPage login={login}/>)}
     </main>
     <footer className="site-footer"><span>CodeLearn · React frontend prototype</span><span>Demo data · Backend unchanged</span></footer>
   </div>;
